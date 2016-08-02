@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var timer = NSTimer()
 
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -17,11 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     
     @IBAction func startTime(sender: AnyObject) {
-        timeLabel.text = "Start!"
+        validateTimer()
         alternateButtons()
     }
     @IBAction func stopTime(sender: AnyObject) {
-        timeLabel.text = "Stop!"
+        timer.invalidate()
         alternateButtons()
     }
     override func viewDidLoad() {//do these things as soon as you load
@@ -44,6 +46,15 @@ class ViewController: UIViewController {
         
         stopButton.enabled = !stopButton.enabled
         stopButton.hidden = !stopButton.hidden
+    }
+    
+    func validateTimer(){
+        let repeatingFunction = #selector(ViewController.updateTime)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: repeatingFunction, userInfo: nil, repeats: true)
+    }
+    
+    func updateTime(){
+        print("wow")
     }
 }
 
