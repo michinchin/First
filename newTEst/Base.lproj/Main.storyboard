@@ -18,27 +18,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-DQ-S5b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-DQ-S5b">
                                 <rect key="frame" x="175" y="237" width="250" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FQj-DQ-S5b" secondAttribute="height" multiplier="2:1" id="FND-d1-Jgx"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="jr5-F9-z0V"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="znX-Jk-OXT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-Fh-vXZ">
+                                <rect key="frame" x="175" y="92" width="250" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="DvT-65-Ue5"/>
+                                    <constraint firstAttribute="width" constant="250" id="Zdb-Hd-Hoz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="uWc-r3-ac2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.033851266863400516" green="0.67974759615384617" blue="0.01243717059612641" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uWc-r3-ac2"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0si-5d-pVs">
+                                <rect key="frame" x="175.5" y="382" width="250" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="WPK-YW-ie4"/>
+                                    <constraint firstAttribute="height" constant="125" id="pCS-4X-jR9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.84735576923076916" green="0.1728583830074403" blue="0.074239642398568464" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0si-5d-pVs" firstAttribute="top" secondItem="FQj-DQ-S5b" secondAttribute="bottom" constant="125" id="7Kg-me-ZvD"/>
+                            <constraint firstItem="FQj-DQ-S5b" firstAttribute="top" secondItem="xLS-Fh-vXZ" secondAttribute="bottom" constant="20" id="Ci4-Wi-40v"/>
+                            <constraint firstItem="0si-5d-pVs" firstAttribute="top" secondItem="FQj-DQ-S5b" secondAttribute="bottom" constant="20" id="Dlj-0H-ain"/>
+                            <constraint firstItem="xLS-Fh-vXZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bMG-XP-hKe"/>
                             <constraint firstItem="FQj-DQ-S5b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="faO-cH-zJn"/>
+                            <constraint firstItem="0si-5d-pVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hIk-X9-KoJ"/>
                             <constraint firstItem="FQj-DQ-S5b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k1T-9R-V1x"/>
+                            <constraint firstItem="FQj-DQ-S5b" firstAttribute="top" secondItem="xLS-Fh-vXZ" secondAttribute="bottom" constant="20" id="rCH-iG-iYT"/>
+                            <constraint firstItem="xLS-Fh-vXZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s9S-eH-5G1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bMG-XP-hKe"/>
+                                <exclude reference="Ci4-Wi-40v"/>
+                                <exclude reference="7Kg-me-ZvD"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="305"/>
         </scene>
     </scenes>
 </document>
