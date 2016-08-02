@@ -45,6 +45,9 @@
                                         <exclude reference="uWc-r3-ac2"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="startTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nc2-BF-CdH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0si-5d-pVs">
                                 <rect key="frame" x="175.5" y="382" width="250" height="125"/>
@@ -56,6 +59,9 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.84735576923076916" green="0.1728583830074403" blue="0.074239642398568464" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qvj-M0-ZzF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -78,6 +84,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="FQj-DQ-S5b" id="Vgo-SK-NFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
