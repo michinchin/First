@@ -85,6 +85,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="startButton" destination="xLS-Fh-vXZ" id="xBs-hF-LFY"/>
+                        <outlet property="stopButton" destination="0si-5d-pVs" id="67c-Hu-oeH"/>
                         <outlet property="timeLabel" destination="FQj-DQ-S5b" id="Vgo-SK-NFl"/>
                     </connections>
                 </viewController>
